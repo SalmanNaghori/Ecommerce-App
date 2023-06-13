@@ -1,4 +1,4 @@
-import 'package:ecommerece_frontend/data/model/user_model.dart';
+import 'package:ecommerece_frontend/data/model/user/user_model.dart';
 
 abstract class UserState {}
 

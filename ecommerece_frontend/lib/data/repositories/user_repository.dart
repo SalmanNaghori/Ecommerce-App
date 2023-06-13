@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:ecommerece_frontend/data/model/user_model.dart';
+import 'package:ecommerece_frontend/data/model/user/user_model.dart';
 
 import '../../core/api.dart';
 
-class UserRePository {
+class UserRepository {
   final _api = Api();
 
   //create a new user
