@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:ecommerece_frontend/core/routes.dart';
 import 'package:ecommerece_frontend/logic/cubit/category_cubit/category_cubit.dart';
+import 'package:ecommerece_frontend/logic/cubit/product_cubit/product_cubit.dart';
 import 'package:ecommerece_frontend/logic/cubit/user_cubit/user_cubit.dart';
 import 'package:ecommerece_frontend/presentation/screens/auth/login_screen.dart';
 import 'package:ecommerece_frontend/presentation/splash/splash_screen.dart';
@@ -25,7 +26,8 @@ class EcommerceApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => UserCubit()),
-        BlocProvider(create: (context) => CategoryCubit())
+        BlocProvider(create: (context) => CategoryCubit()),
+        BlocProvider(create: (context) => ProductCubit())
       ],
       child: MaterialApp(
         theme: Themes.defaultTheme,

@@ -27,9 +27,10 @@ class ProductRepository {
   }
 
   // fatch category by category
-  Future<List<ProductModel>> fatchProductsbyCategory() async {
+  Future<List<ProductModel>> fatchProductsbyCategory(String categoryId) async {
     try {
-      Response response = await _api.sendRequest.get("/product");
+      Response response =
+          await _api.sendRequest.get("/product/category/$categoryId");
 
       ApiResponse apiResponse = ApiResponse.fromResponse(response);
 

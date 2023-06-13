@@ -1,7 +1,7 @@
 class ProductModel {
   String? category;
   String? title;
-  String? discription;
+  String? description;
   int? price;
   List<String>? image;
   String? sId;
@@ -11,7 +11,7 @@ class ProductModel {
   ProductModel(
       {this.category,
       this.title,
-      this.discription,
+      this.description,
       this.price,
       this.image,
       this.sId,
@@ -21,7 +21,7 @@ class ProductModel {
   ProductModel.fromJson(Map<String, dynamic> json) {
     category = json['category'];
     title = json['title'];
-    discription = json['discription'];
+    description = json['description'];
     price = json['price'];
     image = json['image'].cast<String>();
     sId = json['_id'];
@@ -33,7 +33,7 @@ class ProductModel {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['category'] = this.category;
     data['title'] = this.title;
-    data['discription'] = this.discription;
+    data['description'] = this.description;
     data['price'] = this.price;
     data['image'] = this.image;
     data['_id'] = this.sId;

@@ -39,7 +39,7 @@ class TextStyles {
     fontSize: 32,
   );
   static TextStyle heading3 = TextStyle(
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.bold,
     color: AppColors.text,
     fontSize: 24,
   );
