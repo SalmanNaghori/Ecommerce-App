@@ -1,14 +1,18 @@
 import 'dart:developer';
 import 'package:ecommerece_frontend/core/routes.dart';
+import 'package:ecommerece_frontend/logic/cubit/category_cubit/category_cubit.dart';
 import 'package:ecommerece_frontend/logic/cubit/user_cubit/user_cubit.dart';
 import 'package:ecommerece_frontend/presentation/screens/auth/login_screen.dart';
+import 'package:ecommerece_frontend/presentation/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 
 import 'core/ui.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   Bloc.observer = MyBlocObserver();
   runApp((const EcommerceApp()));
 }
@@ -21,12 +25,13 @@ class EcommerceApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => UserCubit()),
+        BlocProvider(create: (context) => CategoryCubit())
       ],
       child: MaterialApp(
         theme: Themes.defaultTheme,
         debugShowCheckedModeBanner: false,
         onGenerateRoute: Routes.onGenerateRoute,
-        initialRoute: LoginScreen.routeName,
+        initialRoute: SplashScreen.routeName,
       ),
     );
   }

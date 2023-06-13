@@ -1,4 +1,4 @@
-import 'package:ecommerece_frontend/data/model/user_model.dart';
+import 'package:ecommerece_frontend/data/model/user/user_model.dart';
 import 'package:ecommerece_frontend/data/repositories/user_repository.dart';
 import 'package:ecommerece_frontend/logic/cubit/user_cubit/user_state.dart';
 import 'package:ecommerece_frontend/logic/services/preferences.dart';
@@ -9,7 +9,7 @@ class UserCubit extends Cubit<UserState> {
     _initialize();
   }
 
-  final UserRePository _userRepository = UserRePository();
+  final UserRepository _userRepository = UserRepository();
 
   //user initial state
   void _initialize() async {
